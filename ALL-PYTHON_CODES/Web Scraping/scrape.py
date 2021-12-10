@@ -4,7 +4,10 @@ import pprint
 
 res = requests.get('https://news.ycombinator.com/news')
 res2 = requests.get('https://news.ycombinator.com/news?p=2')
+print(res.content)
+print("\n\n\n")
 soup = BeautifulSoup(res.text, 'html.parser')
+print(soup)
 soup2 = BeautifulSoup(res2.text, 'html.parser')
 
 links = soup.select('.storylink')
